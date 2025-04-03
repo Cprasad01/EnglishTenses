@@ -255,6 +255,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Initialize touch support
+    initializeTouchSupport();
+    
     // Show the first tense by default
     showTense('future-simple');
 });
@@ -281,6 +284,24 @@ function initializeAllQuizzes() {
     }
 }
 
+function initializeTouchSupport() {
+    // Better touch feedback for options
+    document.querySelectorAll('.option').forEach(option => {
+        option.addEventListener('touchstart', function() {
+            this.classList.add('touching');
+        });
+        
+        option.addEventListener('touchend', function() {
+            this.classList.remove('touching');
+        });
+    });
+    
+    // Prevent accidental zooming
+    document.addEventListener('gesturestart', function(e) {
+        e.preventDefault();
+    });
+}
+
 function initializeQuiz(tenseId) {
     const quizData = quizzes[tenseId];
     const questionContainer = document.getElementById(`${tenseId}-question`);
@@ -300,6 +321,11 @@ function initializeQuiz(tenseId) {
     let score = 0;
     let isSubmitted = false;
 
+    // Hide result buttons initially
+    dangerBtn.style.display = 'none';
+    successBtn.style.display = 'none';
+    submitBtn.style.display = 'none';
+
     function showQuestion() {
         const currentQuestion = quizData.questions[currentQuestionIndex];
         const questionNumber = currentQuestionIndex + 1;
@@ -318,7 +344,7 @@ function initializeQuiz(tenseId) {
                 `).join('')}
             </div>
             ${selectedAnswers[currentQuestionIndex] !== null ? `
-                <div class="explanation" style="margin-top: 1rem; padding: 1rem; background: #f5f5f5; border-radius: 5px;">
+                <div class="explanation">
                     <strong>Explanation:</strong> ${currentQuestion.explanation}
                 </div>
             ` : ''}
@@ -392,7 +418,7 @@ function initializeQuiz(tenseId) {
         // Show score
         questionContainer.style.display = 'none';
         progressBar.style.display = 'none';
-        document.querySelector(`#${tenseId}-quiz .quiz-navigation`).style.display = 'flex';
+        document.querySelector(`#${tenseId} .quiz-navigation`).style.display = 'none';
         scoreValue.textContent = `${percentage}%`;
         
         // Set color based on score
@@ -422,11 +448,6 @@ function initializeQuiz(tenseId) {
         
         scoreContainer.style.display = 'block';
         isSubmitted = true;
-        
-        // Show all questions navigation after submission
-        prevBtn.style.display = 'block';
-        nextBtn.style.display = 'block';
-        submitBtn.style.display = 'none';
     }
 
     function restartQuiz() {
@@ -439,7 +460,7 @@ function initializeQuiz(tenseId) {
         // Show the first question again
         questionContainer.style.display = 'block';
         progressBar.style.display = 'block';
-        document.querySelector(`#${tenseId}-quiz .quiz-navigation`).style.display = 'flex';
+        document.querySelector(`#${tenseId} .quiz-navigation`).style.display = 'flex';
         scoreContainer.style.display = 'none';
         
         // Reset navigation buttons
