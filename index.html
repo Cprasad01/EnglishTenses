@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>English Future Tenses Quiz</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -27,7 +27,7 @@
             <div class="structure-box">
                 <h3>Structure</h3>
                 <div class="structure-formula">Subject + will + base verb</div>
-                <div class="structure-formula" style="margin-top: 10px; color: var(--accent);">Subject + will not (won't) + base verb (Negative)</div>
+                <div class="structure-formula negative">Subject + will not (won't) + base verb</div>
             </div>
             
             <div class="usage-section">
@@ -45,7 +45,7 @@
                 <div class="example">I think I will go to the beach tomorrow.</div>
                 <div class="example">She will help you with your homework.</div>
                 <div class="example">They will probably arrive at 8pm.</div>
-                <div class="example" style="border-left-color: var(--accent);">I won't (will not) attend the meeting tomorrow.</div>
+                <div class="example negative">I won't (will not) attend the meeting tomorrow.</div>
             </div>
             
             <div class="quiz-section">
@@ -62,7 +62,7 @@
                 <div class="quiz-navigation">
                     <button id="future-simple-prev" class="quiz-btn btn-prev" disabled>Previous</button>
                     <button id="future-simple-next" class="quiz-btn btn-next">Next</button>
-                    <button id="future-simple-submit" class="quiz-btn btn-submit" style="display: none;">Submit</button>
+                    <button id="future-simple-submit" class="quiz-btn btn-submit">Submit</button>
                 </div>
                 
                 <div id="future-simple-score" class="score-container">
@@ -72,10 +72,10 @@
                         <h3>Quiz Summary</h3>
                         <ul id="future-simple-score-details" class="score-details-list"></ul>
                     </div>
-                    <div>
+                    <div class="score-actions">
                         <button id="future-simple-restart" class="quiz-btn quiz-restart">Restart Quiz</button>
-                        <button id="future-simple-danger" class="quiz-btn btn-danger" style="display: none; margin-left: 10px;">Try Again</button>
-                        <button id="future-simple-success" class="quiz-btn btn-success" style="display: none; margin-left: 10px;">Well Done!</button>
+                        <button id="future-simple-danger" class="quiz-btn btn-danger">Try Again</button>
+                        <button id="future-simple-success" class="quiz-btn btn-success">Well Done!</button>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
             <div class="structure-box">
                 <h3>Structure</h3>
                 <div class="structure-formula">Subject + will be + present participle (-ing)</div>
-                <div class="structure-formula" style="margin-top: 10px; color: var(--accent);">Subject + will not (won't) be + present participle (Negative)</div>
+                <div class="structure-formula negative">Subject + will not (won't) be + present participle</div>
             </div>
             
             <div class="usage-section">
@@ -105,7 +105,7 @@
                 <div class="example">This time tomorrow, I will be flying to Paris.</div>
                 <div class="example">At 8pm tonight, we will be watching a movie.</div>
                 <div class="example">Will you be using your car tomorrow?</div>
-                <div class="example" style="border-left-color: var(--accent);">I won't be working this weekend.</div>
+                <div class="example negative">I won't be working this weekend.</div>
             </div>
             
             <div class="quiz-section">
@@ -122,7 +122,7 @@
                 <div class="quiz-navigation">
                     <button id="future-continuous-prev" class="quiz-btn btn-prev" disabled>Previous</button>
                     <button id="future-continuous-next" class="quiz-btn btn-next">Next</button>
-                    <button id="future-continuous-submit" class="quiz-btn btn-submit" style="display: none;">Submit</button>
+                    <button id="future-continuous-submit" class="quiz-btn btn-submit">Submit</button>
                 </div>
                 
                 <div id="future-continuous-score" class="score-container">
@@ -132,10 +132,10 @@
                         <h3>Quiz Summary</h3>
                         <ul id="future-continuous-score-details" class="score-details-list"></ul>
                     </div>
-                    <div>
+                    <div class="score-actions">
                         <button id="future-continuous-restart" class="quiz-btn quiz-restart">Restart Quiz</button>
-                        <button id="future-continuous-danger" class="quiz-btn btn-danger" style="display: none; margin-left: 10px;">Try Again</button>
-                        <button id="future-continuous-success" class="quiz-btn btn-success" style="display: none; margin-left: 10px;">Well Done!</button>
+                        <button id="future-continuous-danger" class="quiz-btn btn-danger">Try Again</button>
+                        <button id="future-continuous-success" class="quiz-btn btn-success">Well Done!</button>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,7 @@
             <div class="structure-box">
                 <h3>Structure</h3>
                 <div class="structure-formula">Subject + will have + past participle</div>
-                <div class="structure-formula" style="margin-top: 10px; color: var(--accent);">Subject + will not (won't) have + past participle (Negative)</div>
+                <div class="structure-formula negative">Subject + will not (won't) have + past participle</div>
             </div>
             
             <div class="usage-section">
@@ -164,7 +164,7 @@
                 <div class="example">By next year, I will have graduated.</div>
                 <div class="example">By the time you arrive, we will have finished dinner.</div>
                 <div class="example">She will have written the report by Friday.</div>
-                <div class="example" style="border-left-color: var(--accent);">They won't have completed the project by Monday.</div>
+                <div class="example negative">They won't have completed the project by Monday.</div>
             </div>
             
             <div class="quiz-section">
@@ -181,7 +181,7 @@
                 <div class="quiz-navigation">
                     <button id="future-perfect-prev" class="quiz-btn btn-prev" disabled>Previous</button>
                     <button id="future-perfect-next" class="quiz-btn btn-next">Next</button>
-                    <button id="future-perfect-submit" class="quiz-btn btn-submit" style="display: none;">Submit</button>
+                    <button id="future-perfect-submit" class="quiz-btn btn-submit">Submit</button>
                 </div>
                 
                 <div id="future-perfect-score" class="score-container">
@@ -191,10 +191,10 @@
                         <h3>Quiz Summary</h3>
                         <ul id="future-perfect-score-details" class="score-details-list"></ul>
                     </div>
-                    <div>
+                    <div class="score-actions">
                         <button id="future-perfect-restart" class="quiz-btn quiz-restart">Restart Quiz</button>
-                        <button id="future-perfect-danger" class="quiz-btn btn-danger" style="display: none; margin-left: 10px;">Try Again</button>
-                        <button id="future-perfect-success" class="quiz-btn btn-success" style="display: none; margin-left: 10px;">Well Done!</button>
+                        <button id="future-perfect-danger" class="quiz-btn btn-danger">Try Again</button>
+                        <button id="future-perfect-success" class="quiz-btn btn-success">Well Done!</button>
                     </div>
                 </div>
             </div>
@@ -207,7 +207,7 @@
             <div class="structure-box">
                 <h3>Structure</h3>
                 <div class="structure-formula">Subject + will have been + present participle (-ing)</div>
-                <div class="structure-formula" style="margin-top: 10px; color: var(--accent);">Subject + will not (won't) have been + present participle (Negative)</div>
+                <div class="structure-formula negative">Subject + will not (won't) have been + present participle</div>
             </div>
             
             <div class="usage-section">
@@ -223,7 +223,7 @@
                 <div class="example">By next month, I will have been working here for 5 years.</div>
                 <div class="example">They will have been traveling for 24 hours when they arrive.</div>
                 <div class="example">By 2025, we will have been living in this house for a decade.</div>
-                <div class="example" style="border-left-color: var(--accent);">I won't have been waiting for more than an hour.</div>
+                <div class="example negative">I won't have been waiting for more than an hour.</div>
             </div>
             
             <div class="quiz-section">
@@ -240,7 +240,7 @@
                 <div class="quiz-navigation">
                     <button id="future-perfect-continuous-prev" class="quiz-btn btn-prev" disabled>Previous</button>
                     <button id="future-perfect-continuous-next" class="quiz-btn btn-next">Next</button>
-                    <button id="future-perfect-continuous-submit" class="quiz-btn btn-submit" style="display: none;">Submit</button>
+                    <button id="future-perfect-continuous-submit" class="quiz-btn btn-submit">Submit</button>
                 </div>
                 
                 <div id="future-perfect-continuous-score" class="score-container">
@@ -250,10 +250,10 @@
                         <h3>Quiz Summary</h3>
                         <ul id="future-perfect-continuous-score-details" class="score-details-list"></ul>
                     </div>
-                    <div>
+                    <div class="score-actions">
                         <button id="future-perfect-continuous-restart" class="quiz-btn quiz-restart">Restart Quiz</button>
-                        <button id="future-perfect-continuous-danger" class="quiz-btn btn-danger" style="display: none; margin-left: 10px;">Try Again</button>
-                        <button id="future-perfect-continuous-success" class="quiz-btn btn-success" style="display: none; margin-left: 10px;">Well Done!</button>
+                        <button id="future-perfect-continuous-danger" class="quiz-btn btn-danger">Try Again</button>
+                        <button id="future-perfect-continuous-success" class="quiz-btn btn-success">Well Done!</button>
                     </div>
                 </div>
             </div>
