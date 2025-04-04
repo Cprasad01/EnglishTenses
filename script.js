@@ -23,7 +23,7 @@ const quizzes = {
                     "I have not called you tomorrow."
                 ],
                 correctAnswer: 0,
-                explanation: "The negative form of Simple Future is 'will not' or 'won't' + base verb."
+                explanation: "The negative form of Simple Future is 'will not' or 'won't' + base verb(v1)."
             },
             {
                 question: "Which sentence correctly uses Simple Future for a promise?",
@@ -45,7 +45,7 @@ const quizzes = {
                     "Have you enjoyed the party?"
                 ],
                 correctAnswer: 0,
-                explanation: "The question form of Simple Future is 'Will + subject + base verb?'"
+                explanation: "The question form of Simple Future is 'Will + subject + base verb(v1)?'"
             },
             {
                 question: "Which sentence shows the correct negative form?",
@@ -72,18 +72,21 @@ const quizzes = {
                     "We were playing tennis."
                 ],
                 correctAnswer: 1,
-                explanation: "'They will be traveling' uses 'will be + present participle' which is the structure for Future Continuous."
+                explanation: "'They will be traveling' uses 'will be + v4(-ing)' which is the structure for Future Continuous."
             },
             {
-                question: "What is the correct question form of: 'You will be waiting for me'?",
+                question: "Which sentence is in the Future Continuous tense?",
                 options: [
-                    "Will you be waiting for me?",
-                    "Do you be waiting for me?",
-                    "Are you waiting for me?",
-                    "Have you been waiting for me?"
+                    "Leninkrishna will be debugging the code at 10 AM tomorrow.", 
+
+                    "Lepakshi attends the weekly meeting every Monday.",
+
+                     "Harshavardhan fixed the server issue yesterday.",    
+
+                     "Leninkrishna and Lepakshi have worked on this project before." 
                 ],
                 correctAnswer: 0,
-                explanation: "The question form of Future Continuous is 'Will + subject + be + present participle?'"
+                explanation:" The option1 uses 'will be + v4(-ing)', the correct structure for Future Continuous. The other options use different tenses."
             },
             {
                 question: "When do we use Future Continuous tense?",
